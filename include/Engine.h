@@ -1,6 +1,7 @@
 #ifndef ENGINE_H_INCLUDED
 #define ENGINE_H_INCLUDED
 #include "ObjectManager.h"
+#include "MapManager.h"
 class Engine {
     public:
         Engine();
@@ -14,6 +15,7 @@ class Engine {
         static sf::RenderWindow mWindow;
         static ObjectManager mObjectManager;
         static bool PressedA,PressedS,PressedD,PressedW;
+        static MapManager mMapManager;
 
 };
 
