@@ -1,9 +1,11 @@
 #include "stdafx.h"
 #include "include/PawnEntityObject.h"
+#include "include/MapManager.h"
 #include "include/Engine.h"
 
 PawnEntityObject::PawnEntityObject() {
-    mSprite.setPosition(mSprite.getGlobalBounds().width, 768-18);
+    MapManager mapman;
+    mSprite.setPosition(mSprite.getGlobalBounds().width, 768-80);
 }
 
 PawnEntityObject::~PawnEntityObject() {
@@ -20,7 +22,6 @@ void PawnEntityObject::Update(float dT) {
         if(Engine::ReturnInputStatus(sf::Keyboard::D)) {
             movement.x += 300.f;
         }
-
 
     }
     mSprite.move(movement * dT);

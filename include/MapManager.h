@@ -8,7 +8,7 @@ class MapManager {
         void DrawMap(sf::RenderWindow& dWindow);
         void UpdateMap(float dT);
         sf::Texture mBGTexture,mGroundTexture;
-        sf::Sprite mBG,mGround[10];
+        sf::Sprite mBG[10],mGround[10];
 };
 
 

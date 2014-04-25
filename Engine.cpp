@@ -12,10 +12,10 @@ Engine::~Engine() {
 
 void Engine::Init() {
     mWindow.create(sf::VideoMode(1024,768,32), "FGEngine - PREALPHA");
+    mMapManager.LoadMap();
     PawnEntityObject *player = new PawnEntityObject();
     player->Load("pl.png");
     mObjectManager.Add("player", player);
-    mMapManager.LoadMap();
     GameLoop();
     mWindow.close();
 }
